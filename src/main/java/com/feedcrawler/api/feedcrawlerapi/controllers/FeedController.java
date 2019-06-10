@@ -21,4 +21,34 @@ public class FeedController {
 		return feedService.getAllFeeds();
 	}
 	
+	/* Retrieve all web feeds from EONLINE */
+	@GetMapping("/eonline-feeds")
+	public List<Feed> getEonlineFeeds(){
+		return feedService.getAllFeedsByProvider("EONLINE");
+	}
+	
+	/* Retrieve all web feeds from NYT */
+	@GetMapping("/nyt-feeds")
+	public List<Feed> getNytFeeds(){
+		return feedService.getAllFeedsByProvider("NYT");
+	}
+	
+	/* Retrieve all web feeds from SKYNEWS */
+	@GetMapping("/skynews-feeds")
+	public List<Feed> getSkyNewsFeeds(){
+		return feedService.getAllFeedsByProvider("SKYNEWS");
+	}
+	
+	/* Retrieve all web feeds from SSPORTS24 */
+	@GetMapping("/ssports-feeds")
+	public List<Feed> getSSportsFeeds(){
+		return feedService.getAllFeedsByProvider("SSPORTS24");
+	}
+	
+	/* Retrieve all web feeds from FEEDFORALL */
+	@GetMapping("/feedforall-feeds")
+	public List<Feed> getFeedForAllFeeds(){
+		return feedService.getAllFeedsByProvider("FEEDFORALL");
+	}
+	
 }

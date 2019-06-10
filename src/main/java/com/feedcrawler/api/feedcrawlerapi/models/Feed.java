@@ -2,6 +2,7 @@ package com.feedcrawler.api.feedcrawlerapi.models;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -15,12 +16,14 @@ public class Feed {
 	
 	private String title;
 	
+	
 	private String link;
 	
 	private String published_at;
 	
 	private Date created_at;
 	
+	@Column(name = "feed_provider")
 	private String feed_provider;
 
 	public Feed() {
