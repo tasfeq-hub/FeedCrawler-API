@@ -16,7 +16,6 @@ public class Feed {
 	
 	private String title;
 	
-	
 	private String link;
 	
 	private String published_at;
