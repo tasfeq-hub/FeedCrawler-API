@@ -65,6 +65,12 @@ public class FeedController {
 		return feedService.getAllFeedsByProvider("FEEDFORALL");
 	}
 	
+	/* Retrieve all web feeds from Washington Times */
+	@GetMapping("/wt-feeds")
+	public List<Feed> getWtFeeds(){
+		return feedService.getAllFeedsByProvider("WT");
+	}
+	
 	/* Feeds update request from client */
 	@GetMapping("/update-feeds")
 	public boolean checkUpdate(){
